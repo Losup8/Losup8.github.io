@@ -1,3 +1,11 @@
+
+
+
+
+
+1850
+
+
 .neviem {
     display: block;
     text-align: center;
@@ -8,37 +16,27 @@ body {
     background-color: rgb(45, 38, 38);
 }
 
-
-
 .NiečoOMne {
-    background-color: #1f1212;
+    background-color: rgb(20, 19, 19);
     padding: 10px; 
-    width: 200px;
+    width: 700px;
     height: 200px;
     text-align: center; 
     justify-content: center;
-    text-align: center;
     font-size: 20px;
     border-radius: 10px; /* Zaoblenie rohov kocky */
+    border: 5px solid #ff0000; /* Rámček okolo kocky */
+    transition: background-color 0.3s ease; /* Pridanie prechodového efektu pri zmene farby */
 }
 
-
-.NiečoOMne {
-    justify-content: center; /* Horizontálne centrovanie kocky */
-    align-items: center; /* Vertikálne centrovanie obsahu v kontajneri */
-    width: 50%; /* Zaberá 100% šírky rodiča (body) */
-    height: 50%; /* Zaberá 100% výšky rodiča (body) */
-    border: 5px solid #ff0000; /* Rámček okolo kocky */
+.NiečoOMne:hover {
+    background-color: rgb(45, 38, 38); /* Nová farba kocky pri umiestnení myši */
 }
 
 .container {
     display: flex;
     justify-content: center; /* Horizontálne centrovanie kocky */
+    align-items: center; /* Vertikálne centrovanie kocky */
     width: 100%; /* Zaberá 100% šírky rodiča (body) */
     height: 100%; /* Zaberá 100% výšky rodiča (body) */
 }
-
-
-
-
-1850
