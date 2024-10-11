@@ -3,6 +3,7 @@ body {
     margin: 0px;
     background-color: rgb(10, 10, 10);
     display: solid;
+    -webkit-user-select: none;
 }
 .Logo {
     width: 45px;
