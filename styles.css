@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: rgb(10, 10, 10);
+    display: solid;
+}
+.Logo {
+    width: 45px;
+    margin-top: 30px;
+    border-radius: 500px;
+}
+.header {
+    color: white;
+}
+header {
+    background-color: rgb(20, 20, 20);
+    height: 90px;
+}
+.link {
+    margin-top: -45px;
+    text-align: center;
+}
+.link2 {
+    margin-top: -55px;
+    margin-left: 50px;
+}
+.Small_background {
+    width: 1903px;
+}
+.Link3 {
+    text-align: center;
+    color: white;
+    border: 2px;
+    background-color: rgb(20, 20, 20);
+    font-size: 24.3px;
+    border-radius: 10px;
+    width: 350px;
+    height: 390px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    transition: 0.5s;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.Link4 {
+    text-align: center;
+    color: white;
+    border: 2px;
+    background-color: rgb(20, 20, 20);
+    font-size: 20.02px;
+    border-radius: 10px;
+    width: 350px;
+    height: 390px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    transition: 0.5s;
+    margin-top: -410px;
+    margin-left: 600px;
+}
+.Link5 {
+    text-align: center;
+    color: white;
+    border: 2px;
+    background-color: rgb(20, 20, 20);
+    font-size: 22px;
+    border-radius: 10px;
+    width: 350px;
+    height: 390px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    transition: 0.5s;
+    margin-top: -409px;
+    margin-left: 1150px;
+}
+.Link6 {
+    text-align: center;
+    color: white;
+    border: 2px;
+    background-color: rgb(20, 20, 20);
+    font-size: 20.02px;
+    border-radius: 10px;
+    width: 500px;
+    height: 90px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    transition: 0.5s;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.Link7 {
+    text-align: center;
+    color: white;
+    border: 2px;
+    background-color: rgb(20, 20, 20);
+    font-size: 20.02px;
+    border-radius: 10px;
+    width: 500px;
+    height: 90px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    transition: 0.5s;
+    margin-top: -107px;
+    margin-left: 900px;
+}
+.YouTube {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 2px;
+    background-color: #141414;
+    font-size: 20.02px;
+    border-radius: 10px;
+    width: 120px;
+    height: 60px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    transition: 0.5s;
+}
+.TikTok {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 2px;
+    background-color: rgb(20, 20, 20);
+    font-size: 20.02px;
+    border-radius: 10px;
+    width: 120px;
+    height: 60px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    transition: 0.5s;
+    margin-left: 20px;
+}
+.Link3:hover {
+    transform: scale(1.05);
+    background-color: rgb(13, 13, 13);
+    border-color: rgb(20, 20, 20);
+}
+.Link4:hover {
+    transform: scale(1.05);
+    background-color: rgb(13, 13, 13);
+    border-color: rgb(20, 20, 20);
+}
+.Link5:hover {
+    transform: scale(1.05);
+    background-color: rgb(13, 13, 13);
+    border-color: rgb(20, 20, 20);
+}
+.Link6:hover {
+    transform: scale(1.05);
+    background-color: rgb(13, 13, 13);
+    border-color: rgb(20, 20, 20);
+}
+.Link7:hover {
+    transform: scale(1.05);
+    background-color: rgb(13, 13, 13);
+    border-color: rgb(20, 20, 20);
+}
