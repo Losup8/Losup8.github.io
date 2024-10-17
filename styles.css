@@ -157,43 +157,38 @@ header {
     background-color: rgb(13, 13, 13);
     border-color: rgb(20, 20, 20);
 }
-@media screen and (min-width: 200px) {
-    header {width: 258%;}
+@media only screen and (max-width: 1080px) {
+    .link2 {
+        margin-top: -30%;
+    }
+    header {
+        width: 100%;
+        display: flex; 
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+    }
+    .Link3, .Link4, .Link5, .Link6, .Link7 {
+        margin-left: 2%;
+        margin-top: 5%; 
+        width: 90%; 
+        font-size: 1.5em;
+        padding: 10px; 
+    }
     .Link3 {
-        margin-left: 15%;
-        width: 230%;
-        font-size: 230%;
+        font-size: 165%;
     }
     .Link4 {
-        margin-left: 15%;
-        margin-top: 25%;
-        width: 230%;
-        font-size: 190%;
+        font-size: 140%;
     }
     .Link5 {
-        margin-left: 15%;
-        margin-top: 25%;
-        width: 230%;
-        font-size: 220%;
-    }
-    .Link6 {
-        margin-left: 15%;
-        margin-top: 25%;
-        width: 100%;
-        height: 20%;
-        font-size: 220%;
+        font-size: 160%;
     }
     .Link7 {
-        margin-left: 139%;
-        margin-top: -70%;
-        font-size: 10mm;
-        width: 100%;
-        height: 50mm;
+        height: auto;
+        font-size: 1.5em; 
     }
-    .YouTube {
-        font-size: 10mm;
-    }
-    .TikTok {
-        font-size: 10mm;
+    .YouTube, .TikTok {
+        font-size: 1em;
     }
 }
+
