@@ -191,4 +191,39 @@ header {
         font-size: 1em;
     }
 }
+@media only screen and (min-width: 1080px) {
+    .Link {
+        margin-top: 2%;
+    }
 
+    header {
+        width: 100%;
+        display: flex; 
+        justify-content: space-between; 
+        flex-wrap: nowrap; /* Zmenené na nowrap pre udržanie vzhľadu */
+    }
+    .Link3, .Link4, .Link5, .Link6, .Link7 {
+        margin-left: 3%; 
+        width: 25%; 
+        font-size: 1.65em;
+        padding: 10px; 
+    }
+    .Link4 {
+        margin-top: -32%;
+        margin-left: 36%;
+        font-size: 1.4em;
+    }
+    .Link5 {
+        margin-top: -32.3%;
+        margin-left: 70%;
+        font-size: 1.6em;
+    }
+    .Link7 {
+        height: auto;
+        font-size: 1.5em; /* Zjednotenie veľkosti textu s Link6 */
+        margin-left: 70%;
+    }
+    .YouTube, .TikTok {
+        font-size: 1em;
+    }
+}
