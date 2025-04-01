@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Body */
+body {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-image: url(resources/sakura-street.1920x1080.gif);
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    background-attachment: fixed;
+}
+/* Header */
+.headertext {
+    color: white;
+    font-family: 'Jersey 20';
+}
+.header {
+    margin: 0 auto;
+    margin-left: 8em;
+    align-items: center;
+    width: 100em;
+    height: 5em;
+    background-color: rgb(255, 154, 247);
+    border: solid rgb(255, 123, 244);
+    border-radius: 1em;
+    image-rendering: pixelated;
+    opacity: 0.9;
+    box-shadow: 0.3em 0.3em rgb(255, 92, 241);
+}
+.header a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+.losup {
+    display: flex;
+    font-family: 'Pixelify Sans';
+    font-size: 1.2em;
+    margin-left: 2em;
+    margin-top: -2em;
+    font-size: 1.5em;
+}
+.logo {
+    display: flex;
+    margin-top: 0.5em;
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+}
+.header- {
+    opacity: 0;
+}
+.sect, .sect2 {
+    display: flex;
+    font-size: 1.5em;
+    color: #ffffff;
+    transition: 0.6s;
+}
+.sect {
+    margin-left: 54em;
+    margin-top: -2.45em;
+}
+.sect2 {
+    margin-left: 48em;
+    margin-top: -3.25em;
+}
+.sect:hover, .sect2:hover {
+    color: rgb(255, 79, 226)
+}
+@media (max-width: 1000px) {
+    .header {
+    width: 21em;
+    margin-left: 0em;
+    }
+    .logo {
+        width: 3.5em;
+        height: auto;
+    }
+    .losup {
+        font-size: 1em;
+        margin-left: 2.5em;
+        margin-top: -2.5em;
+    }
+    .sect {
+        margin-top: -3.5em;
+        margin-left: 20em;
+        font-size: 0.8em;
+    }
+}
+</style>
+<body>
+    <header>
+        <div class="header">
+            <img src="resources/logo.png" class="logo">
+            <h2 class="headertext"><span class="losup">Losup</span></h2>
+            <a href="about.html" href="#" class="headertext"><span class="sect">About Me</span></a>  
+            <a href="projects.html" href="#" class="headertext"><span class="sect2">Projects</span></a>
+        </div>
+    </header>
+</body>
+</html>
