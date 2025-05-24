@@ -1,0 +1,779 @@
+/* --- ZÁKLADNÍ NASTAVENÍ --- */
+:root {
+    --primary: #6246ea;
+    --secondary: #e45858;
+    --dark: #2b2c34;
+    --light: #fffffe;
+    --gray: #d1d1e9;
+    --accent: #6246ea;
+    --gradient-1: linear-gradient(45deg, #6246ea, #e45858);
+    --gradient-2: linear-gradient(135deg, #e45858, #6246ea);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--dark);
+    color: var(--light);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+  }
+  
+  /* --- NAVIGACE --- */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(43, 44, 52, 0.8);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-scrolled {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: var(--gradient-1);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background: var(--light);
+  }
+  
+  /* --- SEKCE HERO --- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+    z-index: 1;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    position: relative;
+  }
+  
+  .hero h1 span {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+  }
+  .radius {
+    border-radius: 40%;
+  }
+  .hero-image {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    transform: translateY(-50%);
+    width: 40%;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards, float 6s ease-in-out infinite;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--gradient-1);
+    color: var(--light);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1s forwards;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-2);
+    z-index: -1;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  .btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* --- SEKCE O NÁS --- */
+  .about {
+    padding: 5rem 5%;
+    background-color: #2e2f38;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    opacity: 0;
+  }
+  
+  .section-title.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gradient-1);
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    backdrop-filter: blur(10px);
+  }
+  
+  .about-card.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    animation: pulse 2s infinite;
+  }
+  
+  .about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* --- SEKCE SLUŽBY --- */
+  .services {
+    padding: 5rem 5%;
+    background-color: var(--dark);
+    position: relative;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .service-card:hover::before {
+    opacity: 0.1;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* --- SEKCE PORTFOLIO --- */
+  .portfolio {
+    padding: 5rem 5%;
+    background-color: #2e2f38;
+  }
+  
+  .portfolio-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 30px;
+    color: var(--light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--primary);
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .portfolio-item.animate, .PortofolioText.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .portfolio-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  
+  .portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+        transform: translateY(100%);
+        transition: all 0.3s ease;
+  }
+  .PortofolioLink {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    transition: 0.3s;
+  }
+  .portfolio-img:hover {
+    transform: scale(1.1);
+  }
+    .PortofolioText {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.7s;
+    backdrop-filter: blur(10px);
+  }
+  .PortofolioText:hover {
+        box-shadow: 0 12px 17px rgba(0, 0, 0, 0.2);
+  }
+  .PortofolioLink:hover {
+    color: rgb(222, 165, 255);
+  }
+  /* --- SEKCE KONTAKT --- */
+  .contact {
+    padding: 5rem 5%;
+    background-color: var(--dark);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+  
+  .contact-info {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .contact-info.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-details {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-icon {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+  
+  .contact-form {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .contact-form.animate {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light);
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    outline: none;
+  }
+  
+  textarea.form-control {
+    resize: none;
+    height: 150px;
+  }
+  
+  /* --- FOOTER --- */
+  .footer {
+    padding: 2rem 5%;
+    background-color: #252630;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-link:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+  }
+  
+  .footer-text {
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
+  
+  /* --- SPECIÁLNÍ EFEKTY --- */
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+    left: 30px;
+  }
+  
+  .glitch-text:hover {
+    animation: glitch 0.5s infinite;
+  }
+  
+  .typed-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--primary);
+    width: 0;
+    animation: typing 3.5s steps(40, end) forwards;
+  }
+  
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+  }
+  
+  .back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .back-to-top:hover {
+    background: var(--secondary);
+    transform: translateY(-5px);
+  }
+  
+  .circle-bg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--primary);
+    filter: blur(150px);
+     z-index: -1;
+  animation-name: circles;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+  }
+  .circle-1 {
+    top: 10%;
+    left: 10%;
+    animation: float 10s ease-in-out infinite;
+  }
+  
+  .circle-2 {
+    bottom: 20%;
+    right: 5%;
+    background: var(--secondary);
+    animation: float 12s ease-in-out infinite;
+  }
+  
+  .loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--gradient-1);
+    z-index: 9999;
+    width: 0;
+    transition: width 0.2s ease;
+  }
+  .tab-logo {
+    border-radius: 100%;
+  }
+  /* --- RESPONZIVNÍ DESIGN --- */
+  @media (max-width: 1500px) {
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    .hero-image {
+      width: 2em;
+      height: 2em;
+      left: -0.5em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      padding: 1rem 5%;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .nav-links {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      flex-direction: column;
+      background: rgba(43, 44, 52, 0.9);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      padding: 2rem 0;
+      backdrop-filter: blur(10px);
+    }
+  
+    .nav-links.active {
+      left: 0;
+    }
+  
+    .nav-link {
+      margin: 1.5rem 0;
+    }
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 100px;
+    }
+  
+    .hero-text {
+      margin-bottom: 3rem;
+    }
+  
+    .hero-image {
+      position: relative;
+      width: 80%;
+      right: auto;
+      top: auto;
+      transform: none;
+      margin: 2rem auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .about-card, .service-card {
+      padding: 1.5rem;
+    }
+  }
+  
+  /* --- EASTEREGG CSS --- */
+  .nav-links li:nth-child(2) a:hover::before {
+    content: 'HAMBURGER JE TU PRO TEBE BRO';
+    position: absolute;
+    background: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
