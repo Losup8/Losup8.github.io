@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=DM+Serif+Text:ital@0;1&family=Knewave&family=Libertinus+Keyboard&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Warang+Citi&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cherry+Bomb+One&family=DM+Serif+Text:ital@0;1&family=Knewave&family=Libertinus+Keyboard&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Warang+Citi&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cherry+Bomb+One&family=Chewy&family=DM+Serif+Text:ital@0;1&family=Knewave&family=Libertinus+Keyboard&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans+Warang+Citi&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<style>
+body {
+    background-color: #121212;
+    font-family: Roboto;
+    color: white;
+    place-content: center;
+    user-select: none;
+}
+/* Header*/
+.header {
+    width: 60%;
+    height: 6em;
+    top: 1.5em;
+    margin: 2em auto;
+    border-radius: 0.5em;
+    border: solid 2px rgb(255, 255, 255);
+    align-items: center;
+    box-shadow: 0 8px 13px rgb(12, 12, 12);
+    transform: translateY(-10px);
+    position: fixed;
+    left: 21%;
+    backdrop-filter: blur(8px);
+    animation: cometop 0.6s;
+      z-index: 1000;
+}
+.header p {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(211, 41, 29);
+    width: 3em;
+    border-radius: 0.1em;
+    padding: 0.1em;
+    margin-top: -1.7%;
+    margin-left: 5%;
+}
+.white {
+    width: 20%;
+    height: 6em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCFFF9;
+    border-radius: 0.5em;
+    margin-top: -4.25em;
+    margin-left: -0.1em;
+}
+.line {
+    width: 0.18em;
+    height: 6em;
+    background-color: rgb(211, 41, 29);
+    margin-top: -5.97em;
+    margin-left: 5em;
+}
+.dot, .dot1, .dot2 {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 100em;
+    background-color:rgb(211, 41, 29) ;
+}
+.dot {
+    margin-top: -2.5em;
+    margin-left: 2em;
+}
+.dot1{
+    margin-top: -1.5em;
+    margin-left: 2.7em;
+}
+.dot2{
+    margin-top: -0.7em;
+    margin-left: 1.6em;
+}
+.links {
+    margin-left: 25%;
+    font-size: 1.5em;
+    margin-top: 1.3em;
+}
+.home, .about, .projects {
+    margin-left: 3em;
+    color: rgba(236, 236, 236, 0.884);
+    text-decoration: none; 
+    transition: 0.3s;
+}
+.home:hover , .about:hover, .projects:hover {
+    color: #121212;
+    background-color: rgb(255, 255, 255);
+    padding: 0.2em;
+    border-radius: 0.3em;
+}
+.home:visited, .about:visited, .projects:visited {
+    color: rgba(236, 236, 236, 0.884);
+    text-decoration: none;
+}
+
+.home:focus, .about:focus, .projects:focus {
+    outline: none;
+}
+.socials {
+    display: flex;
+    gap: 1em;
+    margin-top: -4.2em;
+    margin-left: 75%;
+}
+.dc {
+    width: 1em;
+    height: 1em;
+}
+.hoverme:hover {
+    animation-name: rotateme;
+    animation-duration: 0.8s;
+}
+#youtube {
+  font-size:35px;color:red;border-radius: 100%;padding: 0.2em;background-color: #222222;
+}
+#insta {
+  font-size:35px;border-radius: 100%;padding: 0.2em;background-color: #222222;
+  color: #E1306C;
+}
+#dis {
+  width: 3.5em;height: 2.auto;border-radius: 100%;padding: -1em;background-color: #222222;
+}
+@keyframes cometop {
+  from {top: -1000em;}
+  to {top: 1.5em;}
+}
+@keyframes comeleft {
+  from {margin-left: -3em;}
+  to {margin-left: 15%;}
+}
+@keyframes rotateme {
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
+/* Home */
+.sec1 {
+    margin-top: 19%;
+    font-family: Rubik Mono One;
+}
+.sec1 h1 {
+  margin-left: 15%;
+    font-size: 6em;
+    text-align: left;
+    color: #380B0B; 
+    background-image: linear-gradient(90deg, #ff1500 , #D3291D , #ff1500 , #ff4b15 , #F9B27D ); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    animation: comeleft 0.6s;
+}
+.sec1p {
+    margin-top: 1.2em;
+    margin-left: 13.5%;
+    text-align: left;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 2em;
+    animation: comeleft 0.6s;
+}
+.img, .image1 {
+  width: 23em;
+  height: auto;
+  display: flex;
+}
+.image1 {
+  margin-top: -15em;
+  margin-left: 7em;
+}
+.images {
+  margin-left: 60%;
+  margin-top: -15em;
+}
+/* About */
+.anchor {
+  margin-top: 25em;
+}
+.sec2 {
+  width: 100%;
+  height: 50em;
+  background-color: #161515;
+}
+.sec2 h1 {
+  text-align: center;
+  padding-top: 2em;
+  font-size: 3em;
+  font-family: Rubik Mono One;
+}
+.cards {
+  display: flex;
+  gap: 5em;
+  padding-top: 10em;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards h1 {
+  font-family: Roboto;
+  font-size: 2.5em;
+  margin-top: -1em;
+  font-weight: 600;
+  animation-name: updown;
+}
+.mygoalp {
+  font-weight: 400;
+  font-size: 1.4em;
+  width: 23em;
+  text-align: left;
+  margin-top: 2em;
+  margin-left: 1.2em;
+}
+.myjobp {
+  font-size: 1em;
+  margin-left: 1.2em;
+  width: 29em;
+  text-align: left;
+  margin-left: 3em;
+}
+.card {
+  width: 35em;
+  height: 20em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 13px rgb(12, 12, 12);
+  box-shadow: ;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 1000px) { 
+  .sec2 {
+    height: 85em;
+  }
+  .cards {
+    display: block;
+  } 
+  .card {
+    margin-top: 3em;
+    width: 25em;
+    height: 16em;
+  }
+  .mygoalp {
+    font-size: 1em;
+  }
+  .myjobp {
+    font-size: 0.7em;
+  }
+}
+/* Projects */
+.sec3 {
+  display: grid;
+  margin-top: 15em;
+}
+.sec3 h1 {
+  font-size: 2em;
+  margin-top: -5em;
+}
+.project {
+  width: 70%;
+  height: 20em;
+  margin: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 13px rgb(12, 12, 12);
+  box-shadow: ;
+  position: relative;
+  overflow: hidden;
+}
+.project h1 {
+  margin-top: -1em;
+}
+.project p {
+  margin-left: 2em;
+  text-align: left;
+  font-size: 1.5em;
+}
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+    }
+    button:active {
+      background: #45a049;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+    }
+/* Footer */
+.footer {
+  background-color: #070707;
+  width: 100%;
+  height: 6em;
+  display: flex;
+}
+.footer h1 {
+  color: #ffffff; 
+    font-size: 1.5em;
+    margin-top: -0.2em;
+    margin-left: 1em;
+    float: left;
+}
+.footer p {
+  margin-top: 3em;
+  margin-left: 38%;
+}
+
+
+@media (max-width: 1050px) {
+  body {
+    overflow: hidden;
+  }
+  .socials a {
+    display: inline-block;
+    pointer-events: auto;
+    margin-left: 3em;
+  }
+  .socials {
+    margin-left: -64.2em;
+    margin-top: 0em;
+  }
+  .header {
+    display: flex;
+  }
+  .sec1 {
+    padding-top: 10em;
+    margin-left: -4em;
+  }
+  .sec2 {
+    margin-top: -30em;
+            height: 100%;
+  }
+  #dis {
+    margin-left: -3em;
+  }
+  .white, .line, .header p, .dot, .dot1, .dot2 {
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .links {
+    opacity: 0;
+    z-index: 1001;
+    pointer-events: auto; 
+  }
+  #justforme {
+    opacity: 0;
+  }
+    .mygoalp {
+    font-size: 1.5em;
+    width: 15em;
+    margin-left: 0.5em;
+  }
+  .myjobp {
+    width: 25em;
+    margin-left: 0.5em;
+    font-size: 1em;
+  }
+    .card {
+    height: 25em;
+  }
+  .project {
+    height: fit-content;
+  }
+  .copyright {
+    font-size: 0.6em;
+  }
+  .project h1 {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 1565px) {
+  #youtube {
+    margin-left: 90%;
+  }
+}
+</style>
+<body>
+    <div class="header" id="#Home">
+            <div class="links">
+  <a href="#Home" class="home" onclick="activateSection(event, 'Home')">
+    <i class="fa fa-home"></i> Home
+  </a>
+  <a href="#About" class="about" onclick="activateSection(event, 'About')">
+  <i class="fa fa-male"></i> About
+</a>
+  <a href="#ProjectsSection" class="projects" onclick="activateSection(event, 'ProjectsSection')">
+  <i class="glyphicon glyphicon-file"></i> Projects
+</a>
+
+</div>
+        <div class="white"></div>
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <p style="font-weight: 600;" id="something">Losup</p>
+    <div class="socials">
+        <a href="https://www.youtube.com/@Losup_Official" class="hoverme"><i id="youtube" class="fa fa-youtube-play"></i></a>
+        <a href="https://instagram.com/_losup_" class="hoverme"><i id="insta" class="fa fa-instagram"></i></a>
+        <a href="https://discord.gg/FsT7w35Z5h" class="dc"><img id="dis" src="assets/discord.png" alt="" class="hoverme"></a>
+    </div>
+    </div>
+    <div class="sec1">
+        <h1 style="animation-duration: 1s;">Losup</h1>
+        <p class="sec1p"><span style="color: red;">➪</span> Hard work is result of good work.</p>
+        <div class="sec1line"></div>
+        <div class="images" id="img">
+          <img src="assets/2025-09-01_20.18.44.png" alt="" id="justforme" style="width: 80em;height: auto; margin-top: -11em;margin-left: -17em;">
+        </div>
+    </div>
+    <div class="anchor" id="About"></div>
+    <div class="sec2">
+      <h1>About Me</h1>
+      <div class="cards">
+      <div class="card">
+        <h1>🚀 My Goals</h1>
+        <p class="mygoalp">My goal is to study at an IT high school and later at a university. I want to improve my knowledge in programming and become really good at different programming languages such as JavaScript, Python, Go, and C#.</p>
+      </div>
+      <div class="card">
+        <h1>💭 My Dream</h1>
+        <p class="mygoalp">My dream is to become a successful full stack developer. I would like to create useful applications, websites, and projects that can help people and make a positive impact on the world.</p>
+      </div>
+      <div class="card">
+        <h1>🚧 My knowledge</h1>
+        <p class="myjobp">Right now, I am a beginner front-end developer. I know the basics of Python and I can create simple websites and applications using Electron. I can build web pages with HTML and CSS, and I also know some basic JavaScript. For my projects, I usually work in Visual Studio.I can make websites and do front-end work on my own, while I use tutorials when I learn Python. My strongest skill is front-end development, and I am learning it by creating websites, searching on Google, sometimes using AI, and watching Python tutorials on YouTube.</p>
+      </div>
+                <div class="anchor" id="ProjectsSection"></div>  
+    </div>
+      <div class="sec3">
+        <h1 class="txtsec3">Projects</h1>
+        <div class="project">
+          <h1>ModUp - Minecraft Server</h1>
+          <p style="margin-top: 2em;">A community-driven Minecraft server offering survival, competitive minigames, and unique events. Players can enjoy BoxFight, Sumo, and other fun modes while exploring and building together. The project focuses on long-term development, fair play, and an active player community</p>
+          <a href="https://dsc.gg/modup"margin-top: 20em;" class="dc"><img id="dis" src="assets/discord.png" alt="" class="hoverme"></a>
+          <button style="margin-left: 1em;" onclick="copyText()">modup.fun</button>
+        </div>
+        <div class="anchor" id="Projects"></div>
+        <div class="project" style="margin-top: -15em;">
+          <h1>Tools Mania - Minecraft Mod</h1>
+          <p style="margin-top: 2em;">A content expansion mod that introduces a wide range of new tools and utilities to improve gameplay.
+Players can craft unique items designed for mining, building, and survival, making everyday tasks easier.
+The project focuses on adding variety, enhancing efficiency, and giving players more options to explore and create.</p>
+      <a href="https://www.curseforge.com/minecraft/mc-mods/tools-mania" class="button">Tools Mania</a>
+        </div>
+      </div>
+      <div style="margin-top: 15em;"></div>
+      <div class="footer">
+        <h1>Losup</h1>
+        <p class="copyright">© 2025 losup.eu - All Rights Reserved.</p>
+        <a href="https://www.youtube.com/@Losup_Official" style="margin-left: 50em;" ><i style="color: #ff0000; font-size: 3em;margin-top: 0.5em;" class="fa fa-youtube-play"></i></a>
+        <a href="https://instagram.com/_losup_"><i style="color: #ff8484;font-size: 3em; margin-left: 0.2em;margin-top: 0.5em;" class="fa fa-instagram"></i></a>
+      </div>
+<script>
+function activateSection(event, sectionId) {
+  if (event && typeof event.preventDefault === 'function') event.preventDefault();
+
+  // zmena URL hash bez reloadu
+  if (history.replaceState) {
+    history.replaceState(null, '', '#' + sectionId);
+  } else {
+    window.location.hash = sectionId;
+  }
+
+  // reset štýlov na všetkých linkoch
+  document.querySelectorAll('.links a').forEach(a => {
+    a.style.color = '';
+    a.style.backgroundColor = '';
+    a.style.padding = '';
+    a.style.borderRadius = '';
+    a.style.textDecoration = '';
+  });
+
+  // aktívny link zvýrazniť
+  const linkEl = document.querySelector(`.links a[href="#${sectionId}"]`);
+  if (linkEl) {
+    linkEl.style.color = '#121212';
+    linkEl.style.backgroundColor = 'rgb(255, 255, 255)';
+    linkEl.style.padding = '0.2em';
+    linkEl.style.borderRadius = '0.3em';
+    linkEl.style.textDecoration = 'none';
+  }
+
+  // výška headeru (kvôli offsetu)
+  const header = document.querySelector('.header');
+  const headerHeight = header ? header.offsetHeight + 10 : 0;
+
+  // scrollovanie
+  if (sectionId === 'Home') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const top = section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    } else {
+      console.warn("Sekcia s id='" + sectionId + "' neexistuje!");
+    }
+  }
+}
+
+// po načítaní stránky
+window.addEventListener('load', () => {
+  if (!window.location.hash) {
+    history.replaceState(null, '', '#Home');
+  }
+  const hash = window.location.hash.replace('#', '');
+  if (hash) activateSection({ preventDefault: () => {} }, hash);
+});
+
+// funkcia na kopírovanie textu (modup.fun)
+function copyText() {
+  const text = "modup.fun";
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Text copied: " + text);
+  });
+}
+
+</script>
+</body>
+</html>
